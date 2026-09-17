@@ -13,3 +13,4 @@ add_room.sh
 _config.local.yml
 admin.sh
 publish.sh
+_plugins/admin_lan_links.rb
