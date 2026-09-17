@@ -18,17 +18,17 @@
   <main class="site-main">
     <section class="hero">
       <div class="hero-inner">
-        <p class="hero-kicker">Photogrammetry · WebGL · GitHub Pages</p>
-        <h1>Real rooms, scanned and <span class="grad-text">walkable</span> — right in your browser.</h1>
+        <p class="hero-kicker">SP Burgess · Projects</p>
+        <h1>Scans, builds and experiments — including an entire <span class="grad-text">walkable quarry</span>.</h1>
         <p class="hero-sub">{{ site.description | escape }}</p>
         <div class="hero-cta">
-          <a class="btn btn-solid" href="{{ '/gallery/' | relative_url }}">Enter the gallery</a>
+          <a class="btn btn-solid" href="{{ '/quarry/' | relative_url }}">Explore the quarry</a>
           <a class="btn btn-ghost" href="{{ '/projects/' | relative_url }}">Other projects</a>
         </div>
         <p class="hero-stats">
-          <strong>{{ site.rooms | size }}</strong> rooms ·
+          <strong>{{ site.rooms | size }}</strong> quarry buildings scanned ·
           <strong>0</strong> installs ·
-          loads in any modern browser
+          walks in any modern browser
         </p>
       </div>
     </section>
@@ -38,8 +38,8 @@
     <section class="band">
       <div class="band-inner">
         <div class="band-head">
-          <h2>Latest rooms</h2>
-          <a class="see-all" href="{{ '/gallery/' | relative_url }}">All {{ rooms | size }} rooms →</a>
+          <h2>Bole Hill Quarry</h2>
+          <a class="see-all" href="{{ '/quarry/' | relative_url }}">All {{ rooms | size }} buildings →</a>
         </div>
         <div class="card-grid">
           {% for room in rooms limit: 3 %}

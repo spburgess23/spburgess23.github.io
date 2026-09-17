@@ -2,13 +2,13 @@
 layout: home
 ---
 
-<h2>How it works</h2>
+<h2>What's here</h2>
 
-Every room on this site started as a few hundred ordinary photos. A
-photogrammetry pipeline turns them into a textured 3D mesh, trims and
-optimises it for the web, and publishes it here as a single self-contained
-viewer plus a `.glb` model. Open a room, wait a moment for the mesh to
-stream, and you're standing in it — walk with the keyboard, look with the
-mouse.
+The centrepiece is **Bole Hill Quarry** — its buildings scanned and
+rebuilt as walkable 3D meshes you can explore right in the browser.
+Alongside it, the **Projects** section collects the other builds, tools
+and experiments: the scan pipeline that produces the quarry models,
+workshop projects, and whatever comes next.
 
-No plugins, no accounts, no apps. Just a static site on GitHub Pages.
+Everything here is static — a plain website with no backend, built to be
+fast and to stay standing.

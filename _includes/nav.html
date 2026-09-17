@@ -5,7 +5,7 @@
       <span>{{ site.name | default: site.title | escape }}</span>
     </a>
     <nav class="nav-links" aria-label="Main">
-      <a href="{{ '/gallery/' | relative_url }}" {% if page.url contains '/gallery/' or page.layout == 'room' %}aria-current="page"{% endif %}>Gallery</a>
+      <a href="{{ '/quarry/' | relative_url }}" {% if page.url contains '/quarry/' or page.layout == 'room' %}aria-current="page"{% endif %}>Bole Hill Quarry</a>
       <a href="{{ '/projects/' | relative_url }}" {% if page.url contains '/projects/' %}aria-current="page"{% endif %}>Projects</a>
       <a href="{{ '/about/' | relative_url }}" {% if page.url contains '/about/' %}aria-current="page"{% endif %}>About</a>
     </nav>

@@ -2,7 +2,7 @@
 layout: project
 title: The Scan Pipeline
 order: 1
-blurb: "Photos in, walkable 3D rooms out — the pipeline that builds this gallery's content."
+blurb: "Photos in, walkable 3D buildings out — the pipeline that builds the Bole Hill Quarry models."
 link:
 ---
 
