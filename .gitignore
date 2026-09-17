@@ -14,3 +14,4 @@ _config.local.yml
 admin.sh
 publish.sh
 _plugins/admin_lan_links.rb
+palette.py
