@@ -10,3 +10,6 @@ Gemfile.lock
 MAINTENANCE.md
 DOMAIN.md
 add_room.sh
+_config.local.yml
+admin.sh
+publish.sh
