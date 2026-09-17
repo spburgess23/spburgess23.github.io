@@ -1,0 +1,21 @@
+{% comment %}
+  Expects: room (a _rooms collection doc with front matter: title, folder, order, captured, blurb, poster?)
+{% endcomment %}
+{% assign vpath = "/assets/rooms/" | append: include.room.folder | append: "/offline_viewer.html" %}
+{% assign has_viewer = site.static_files | where: "path", vpath | first %}
+<a class="card room-card" href="{{ include.room.url | relative_url }}">
+  {% if include.room.poster %}
+    <img class="card-img" src="{{ '/assets/rooms/' | append: include.room.folder | append: '/' | append: include.room.poster | relative_url }}" alt="" loading="lazy">
+  {% else %}
+    <div class="card-img card-placeholder p{{ forloop.index0 | modulo: 3 }}">
+      <span>{{ include.room.title | slice: 0 }}</span>
+    </div>
+  {% endif %}
+  <div class="card-body">
+    <h3 class="card-title">{{ include.room.title | escape }}</h3>
+    <p class="card-sub">{{ include.room.blurb | escape }}</p>
+    <p class="card-meta">
+      {% if has_viewer %}Captured {{ include.room.captured | date: "%B %Y" }}{% else %}<span class="chip-building">Building…</span>{% endif %}
+    </p>
+  </div>
+</a>

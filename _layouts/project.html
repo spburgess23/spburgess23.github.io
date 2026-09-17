@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<article class="project-page prose">
+  <header class="room-head">
+    <div>
+      <p class="room-kicker"><a href="{{ '/projects/' | relative_url }}">← All projects</a></p>
+      <h1>{{ page.title | escape }}</h1>
+      {% if page.blurb %}<p class="room-meta">{{ page.blurb | escape }}</p>{% endif %}
+    </div>
+  </header>
+  {{ content }}
+  {% if page.link %}
+  <p><a class="btn btn-solid" href="{{ page.link }}" target="_blank" rel="noopener">View this project ↗</a></p>
+  {% endif %}
+</article>

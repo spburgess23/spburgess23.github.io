@@ -1,0 +1,50 @@
+# Site identity — edit these two lines to rebrand the whole site.
+name: Simon
+title: Simon · Room Scans
+
+description: >-
+  Walkable 3D scans of real-world rooms, built with photogrammetry and
+  streamed straight to the browser. No apps, no installs.
+
+# Custom domain (burgess.cc, registered at Cloudflare — see DOMAIN.md)
+url: "https://burgess.cc"
+
+permalink: pretty
+markdown: kramdown
+
+# Room pages are generated from the _rooms/ collection.
+# Add a room = run ./add_room.sh <path-to-room>_MOBILE_OUT>  — that's it.
+collections:
+  rooms:
+    output: true
+  projects:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: rooms
+    values:
+      layout: room
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+
+sass:
+  style: compressed
+
+# Keep repo housekeeping files out of the published site.
+exclude:
+  - add_room.sh
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - DOMAIN.md
+  - vendor

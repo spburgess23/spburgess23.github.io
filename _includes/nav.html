@@ -1,0 +1,13 @@
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 22 78 38v24L50 78 22 62V38z" fill="none" stroke="currentColor" stroke-width="8" stroke-linejoin="round"/></svg>
+      <span>{{ site.name | default: site.title | escape }}</span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="{{ '/gallery/' | relative_url }}" {% if page.url contains '/gallery/' or page.layout == 'room' %}aria-current="page"{% endif %}>Gallery</a>
+      <a href="{{ '/projects/' | relative_url }}" {% if page.url contains '/projects/' %}aria-current="page"{% endif %}>Projects</a>
+      <a href="{{ '/about/' | relative_url }}" {% if page.url contains '/about/' %}aria-current="page"{% endif %}>About</a>
+    </nav>
+  </div>
+</header>

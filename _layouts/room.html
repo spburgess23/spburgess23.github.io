@@ -1,0 +1,45 @@
+---
+layout: default
+---
+{% assign viewer_path = "/assets/rooms/" | append: page.folder | append: "/offline_viewer.html" %}
+{% assign viewer_file = site.static_files | where: "path", viewer_path | first %}
+
+<article class="room-page">
+  <header class="room-head">
+    <div>
+      <p class="room-kicker"><a href="{{ '/gallery/' | relative_url }}">← All rooms</a></p>
+      <h1>{{ page.title | escape }}</h1>
+      <p class="room-meta">
+        {% if page.captured %}Captured {{ page.captured | date: "%B %Y" }}{% endif %}
+      </p>
+    </div>
+  </header>
+
+  {% if viewer_file %}
+  <figure class="viewer-shell">
+    <iframe
+      src="{{ viewer_path }}"
+      title="{{ page.title | escape }} — walkable 3D scan"
+      loading="lazy"
+      allowfullscreen
+      allow="fullscreen; accelerometer; gyroscope; xr-spatial-tracking"></iframe>
+    <figcaption class="viewer-help">
+      <span>Click to grab control · drag to look · <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> to walk</span>
+      <a href="{{ viewer_path }}" target="_blank" rel="noopener">Open full screen ↗</a>
+    </figcaption>
+  </figure>
+  {% else %}
+  <div class="viewer-pending">
+    <p><strong>This room is still being built.</strong></p>
+    <p>The scan is processed into a walkable 3D mesh on the pipeline —
+       check back soon to walk through it.</p>
+  </div>
+  {% endif %}
+
+  {% if page.content != "" or page.blurb %}
+  <div class="prose room-blurb">
+    {{ page.blurb | default: "" | escape | newline_to_br }}
+    {{ content }}
+  </div>
+  {% endif %}
+</article>
