@@ -12,6 +12,11 @@ url: "https://burgess.cc"
 permalink: pretty
 markdown: kramdown
 
+# Jekyll Admin (local visual editor): open straight on the Rooms collection.
+# This key is also required — without it the admin's boot handler crashes.
+jekyll_admin:
+  homepage: rooms
+
 # Room pages are generated from the _rooms/ collection.
 # Add a room = run ./add_room.sh <path-to-room>_MOBILE_OUT>  — that's it.
 collections:
