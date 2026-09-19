@@ -1,10 +1,11 @@
 ---
 layout: room
-title: Main Left
+title: Building 2
 folder: main-left
+project: quarry
 order: 2
 captured: 2026-09-12
-blurb: "The left half of the quarry's main building."
+lat: 53.191024
+lon: -1.451442
+blurb: "The second building on the site, beside the main hall."
 ---
-
-Left side of the main hall, reconstructed from a full photo sweep.

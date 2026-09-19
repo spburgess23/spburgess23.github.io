@@ -7,7 +7,9 @@ layout: default
 <article class="room-page">
   <header class="room-head">
     <div>
-      <p class="room-kicker"><a href="{{ '/quarry/' | relative_url }}">← Bole Hill Quarry</a></p>
+      {% assign pid = page.project | default: "quarry" %}
+      {% assign pback = site.data.projects | where: "id", pid | first %}
+      <p class="room-kicker"><a href="{{ '/' | append: pid | relative_url }}">← {{ pback.name | default: pid | escape }}</a></p>
       <h1>{{ page.title | escape }}</h1>
       <p class="room-meta">
         {% if page.captured %}Captured {{ page.captured | date: "%B %Y" }}{% endif %}

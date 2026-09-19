@@ -5,6 +5,7 @@ _site/
 Gemfile.lock
 *.swp
 .DS_Store
+__pycache__/
 
 # Local-only ops files — never published to the repo
 MAINTENANCE.md
@@ -15,3 +16,5 @@ admin.sh
 publish.sh
 _plugins/admin_lan_links.rb
 palette.py
+control.py
+serve.sh

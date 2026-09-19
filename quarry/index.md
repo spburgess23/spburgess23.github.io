@@ -12,6 +12,7 @@ description: The buildings of Bole Hill Quarry, scanned as walkable 3D meshes â€
   click one and the viewer opens straight inside it. Click to grab control,
   drag to look around, and walk with <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd>.
   Meshes are a few dozen megabytes, so give them a few seconds on first load.
+  Prefer the bird's-eye view? <a href="{{ '/quarry/map/' | relative_url }}">See the site on a map â†’</a>
 </p>
 
 <p>
@@ -20,7 +21,7 @@ description: The buildings of Bole Hill Quarry, scanned as walkable 3D meshes â€
   no plugins, no accounts, no apps.
 </p>
 
-{% assign rooms = site.rooms | sort: "order" %}
+{% assign rooms = site.rooms | where: "project", "quarry" | sort: "order" %}
 
 {% if rooms == empty %}
 <p><em>Nothing scanned yet â€” the first buildings are processing.</em></p>

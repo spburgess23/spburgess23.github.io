@@ -1,0 +1,8 @@
+# Mesh-project registry — the list of site sections that hold walkable scans.
+# Read by the site (room back-links, nav) and by ./control.py (local upload GUI).
+#   id:   URL section name — rooms live at /<id>/, meshes under that project
+#   name: display name shown in nav and on room pages
+# Each room page (_rooms/*.md) carries project: <id> and each project needs
+# <id>/index.md + <id>/map.md (control.py generates both when adding one).
+- id: quarry
+  name: Bole Hill Quarry
