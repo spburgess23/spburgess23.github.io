@@ -245,6 +245,21 @@ img { max-width: 100%; display: block; }
 
 .room-meta { margin: 0; color: var(--muted); }
 
+.viewer-note {
+  margin: 20px 0 -8px;
+  padding: 10px 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--bg-band);
+  font-size: .92rem;
+}
+.viewer-note .note-sub {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: .78rem;
+}
+
 .viewer-shell { margin: 28px 0 12px; }
 
 .viewer-shell iframe {

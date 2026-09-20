@@ -18,6 +18,12 @@ layout: default
   </header>
 
   {% if viewer_file %}
+  <p class="viewer-note">
+    The 3D model below loads automatically — you don't need to press the
+    <em>Load model</em> button.
+    <span class="note-sub">That button is only for opening the viewer file
+    offline, when it isn't being served from a website.</span>
+  </p>
   <figure class="viewer-shell">
     <iframe
       src="{{ viewer_path }}"
