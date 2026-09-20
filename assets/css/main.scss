@@ -368,10 +368,17 @@ kbd {
   z-index: 0;
 }
 
-.maplabel {
-  background: rgba(11, 14, 20, 0.85);
-  color: var(--text);
-  border: 1px solid var(--accent);
-  font-weight: 600;
-  font-size: .8rem;
+/* numbered map pins */
+.pin-num {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: linear-gradient(100deg, var(--accent), var(--accent-2));
+  color: #071018;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .72rem;
+  font-weight: 700;
+  box-shadow: 0 0 0 3px rgba(11, 14, 20, 0.7);
 }

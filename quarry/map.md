@@ -26,6 +26,7 @@ const rooms = [
    url: "{{ r.url }}", ready: {% if has_viewer %}true{% else %}false{% endif %}}{% unless forloop.last %},{% endunless %}
 {% endfor %}
 ];
+rooms.forEach((r, i) => r.num = i + 1);
 
 const map = L.map('quarrymap', {scrollWheelZoom: false});
 const bounds = L.latLngBounds(rooms.map(r => [r.lat, r.lon]));
@@ -35,9 +36,16 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/
   attribution: 'Imagery &copy; <a href="https://www.esri.com/">Esri</a>, Maxar, Earthstar Geographics'
 }).addTo(map);
 
+/* numbered pins only — names live in the popups and the quarry list page */
+const pinIcon = n => L.divIcon({
+  className: '',
+  html: `<div class="pin-num">${n}</div>`,
+  iconSize: [22, 22],
+  iconAnchor: [11, 11]
+});
+
 for (const r of rooms) {
-  const m = L.marker([r.lat, r.lon]).addTo(map);
-  m.bindTooltip(r.title, {permanent: true, direction: 'top', className: 'maplabel'});
+  const m = L.marker([r.lat, r.lon], {icon: pinIcon(r.num)}).addTo(map);
   m.bindPopup(
     `<b>${r.title}</b><br>` +
     (r.ready ? `<a href="${r.url}">Walk inside &rarr;</a>` : `Mesh in progress&hellip;`));
