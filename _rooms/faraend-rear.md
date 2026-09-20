@@ -1,6 +1,6 @@
 ---
 layout: room
-title: Building 4
+title: Building 4 - Production Area
 folder: faraend-rear
 project: quarry
 order: 4

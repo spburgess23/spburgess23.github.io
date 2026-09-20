@@ -1,6 +1,6 @@
 ---
 layout: room
-title: Building 1
+title: Building 1 - Workshop
 folder: workshop
 project: quarry
 order: 1

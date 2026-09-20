@@ -1,6 +1,6 @@
 ---
 layout: room
-title: Building 5
+title: Building 5 - Office
 folder: office
 project: quarry
 order: 5

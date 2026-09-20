@@ -1,6 +1,6 @@
 ---
 layout: room
-title: Building 3
+title: Building 3 - Production Area
 folder: rear-largeroom
 project: quarry
 order: 3
